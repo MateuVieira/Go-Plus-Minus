@@ -23,11 +23,11 @@ func plusMinus(arr []int32) [3]float32 {
 		}
 	}
 
-	arrLenght := len(arr)
+	arrLenght := float32(len(arr))
 
 	var output [3]float32
 	for index, value := range results {
-		output[index] = float32(value) / float32(arrLenght)
+		output[index] = float32(value) / arrLenght
 		fmt.Printf("%f\n", output[index])
 	}
 
@@ -39,5 +39,5 @@ func main() {
 
 	result := plusMinus(arr)
 
-	fmt.Printf("Output: %f", result)
+	fmt.Printf("Output: %f\n", result)
 }
